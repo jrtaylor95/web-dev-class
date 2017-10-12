@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Drawing Recorder</title>
+    <script src="scripts/Utility.js"></script>
+    <script src="scripts/DoublyLinkedList.js"></script>
+    <script src="scripts/Recorder.js"></script>
+    <script src="scripts/recorderMain.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <input type="button" name="start" id="btn_start" value="Start Recording">
+    <input type="button" name="stop" id="btn_stop" value="Stop Recording">
+    <input type="button" name="play" id="btn_play" value="Play">
+    <input type="button" name="save" id="btn_save" value="Save">
+    <input type="button" name="load" id="btn_load" value="Load">
+    <input type="button" name="color" id="btn_color" value="Change Color">
+    <input type="number" name="colorRed" value="255" id="color_red">
+    <input type="number" name="colorGeen" value="0" id="color_green">
+    <input type="number" name="colorBlue" value="0" id="color_blue">
+    <input type="button" name="clear" id="btn_clear" value="Clear">
+    <div>
+      <h3>Directions:</h3>
+      <p>Press the start recording button to start drawing.</p>
+      <p>Move your mouse over the canvas to draw.</p>
+      <p>To stop drawing, press the stop recording button.</p>
+      <p>To play back your drawing, press play.</p>
+      <p>To save your drawing to local storage, press save.</p>
+      <p>To load, press load.</p>
+      <p>To change color, input rgb and press change color.</p>
+      <p>To clear the canvas, press clear.</p>
+    </div>
+  </body>
+</html>

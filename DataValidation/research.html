@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Research Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/research.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="scripts/research.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Research Form</h1>
+    <form action="researchProcessing.php" method="get">
+      <fieldset class="form-group">
+        <legend>General Information</legend>
+        <div class="col-sm-6 col-xs-12">
+          <label class="control-label" for="firstname">First Name:</label>
+          <input class="form-control" type="text" name="firstname" id="firstname" required="true">
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <label class="control-label" for="lastname">Last Name:</label>
+          <input class="form-control" type="text" name="lastname" id="lastname" value="" required="true">
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <label class="control-label" for="phoneFirstPart"Phone:>Phone:</label>
+          <div class="form-inline">
+            <input class="form-control" type="text" name="phoneFirstPart" id="phoneFirstPart" value="" size="3" required="true">
+            <span>-</span>
+            <input class="form-control" type="text" name="phoneSecondPart" id="phoneSecondPart" value="" size="3" required="true">
+            <span>-</span>
+            <input class="form-control" type="text" name="phoneThirdPart" id="phoneThirdPart" value="" size="4" required="true">
+          </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <label class="control-label" for="email">Email:</label>
+          <input class="form-control" type="email" name="email" id="email" value="" required="true">
+        </div>
+      </fieldset>
+      <fieldset class="form-group">
+        <legend>Research Study Data</legend>
+        <fieldset class="form-group">
+          <legend>Age/Height/Weight</legend>
+          <div class="col-sm-4 col-xs-12">
+            <label class="control-label" for="age">Age:</label>
+            <input class="form-control" type="number" name="age" id="age" value="" size="3" required="true" min="1" max="125">
+          </div>
+          <div class="col-sm-4">
+            <label class="control-label col-xs-12" for="heightFeet">Height:</label>
+            <div class="col-xs-6">
+              <div class="input-group">
+                <input class="form-control" type="number" name="heightFeet" id="heightFeet" value="" size="1" required="true" min="2" max="7">
+                <span class="input-group-addon">ft.</span>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="input-group">
+                <input class="form-control" type="number" name="heightInches" id="heightInches" value="" size="2" required="true" min="0" max="11">
+                <span class="input-group-addon">in.</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <label class="control-label" for="weight">Weight:</label>
+            <div class="input-group">
+              <input class="form-control" type="number" name="weight" id="weight" value="" required="true" min="1" max="600">
+              <span class="input-group-addon">Pounds</span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <legend>Conditions</legend>
+          <p class="col-xs-12">Which of the following conditions are present in your family? (Check all that apply)</p>
+          <div class="col-xs-12">
+            <label class="checkbox-inline"><input type="checkbox" name="highBloodPressure" id="highBloodPressure" value="highBloodPressure">High Blood Pressure</label>
+            <label class="checkbox-inline"><input type="checkbox" name="diabetes" id="diabetes" value="diabetes">Diabetes</label>
+            <label class="checkbox-inline"><input type="checkbox" name="glaucoma" id="glaucoma" value="glaucoma">Glaucoma</label>
+            <label class="checkbox-inline"><input type="checkbox" name="asthma" id="asthma" value="asthma">Asthma</label>
+            <label class="checkbox-inline"><input type="checkbox" name="none" id="none" value="none">None</label>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <legend>Time Period</legend>
+          <p class="col-xs-12">How long have you experienced any of the above conditions?</p>
+          <div class="col-xs-12">
+            <label class="radio-inline"><input type="radio" name="period" id="never" value="Never">Never</label>
+            <label class="radio-inline"><input type="radio" name="period" id="less" value="Less than a year">Less than a year</label>
+            <label class="radio-inline"><input type="radio" name="period" id="between" value="One to two years">One to two years</label>
+            <label class="radio-inline"><input type="radio" name="period" id="more" value="More than two years">More than two years</label>
+          </div>
+        </fieldset>
+        <fieldset class="form-group form-inline">
+          <legend>Study Information</legend>
+          <span>Which study are you taking part of?</span>
+          <select class="form-control" name="studyType" id="studyType">
+            <option value="short-term">Short Term</option>
+            <option value="long-term">Long Term</option>
+          </select>
+          <span>Assigned Study ID: </span>
+          <input class="form-control" type="text" name="firstFourDigits" id="firstFourDigits" value="" required="true" placeholder="A###">
+          <span>-</span>
+          <input class="form-control" type="text" name="secondFourDigits" id="secondFourDigits" value="" required="true" placeholder="B###">
+        </fieldset>
+        <fieldset class="form-group">
+          <legend>Additional Information (Comments)</legend>
+          <textarea class="form-control" name="comments" id="comments" rows="8" cols="80"></textarea>
+        </fieldset>
+      </fieldset>
+      <fieldset class="form-group">
+        <input class="btn btn-default" type="reset" name="reset_form" value="Clear Form">
+        <input class="btn btn-default" type="submit" name="submit_form" value="Submit Information">
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+legend {
+  width: inherit;
+  color: #A0522D;
+  border-bottom: none;
+}
+
+fieldset {
+  border-radius: 10px;
+  border: solid 1px;
+  padding-top: 0.35em;
+  padding-right: 0.625em;
+  padding-bottom: 0.75em;
+  padding-left: 0.625em;
+  margin-top: 0px;
+  margin-right: 2px;
+  margin-bottom: 0px;
+  margin-left: 2px;
+}
+
+h1 {
+  text-shadow: 2px 2px 2px;
+}
